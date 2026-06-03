@@ -18,3 +18,6 @@ def hotel_detail(request, hotel_id):
         'hotel': hotel,
         'daily_prices': daily_prices,
     })
+    
+def top(request):
+    return render(request, 'hotels/top.html')
