@@ -1,0 +1,14 @@
+<h1>{{ hotel.name }}</h1>
+
+<p>住所：{{ hotel.address }}</p>
+<p>{{ hotel.description }}</p>
+
+<h2>日別料金</h2>
+
+{% for daily_price in daily_prices %}
+  <p>{{ daily_price.date }}：{{ daily_price.price }}円</p>
+{% empty %}
+  <p>料金情報が登録されていません。</p>
+{% endfor %}
+
+<a href="/hotels/">一覧へ戻る</a>

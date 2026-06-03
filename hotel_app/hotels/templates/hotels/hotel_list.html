@@ -1,0 +1,15 @@
+<h1>ホテル一覧</h1>
+
+{% for hotel in hotels %}
+  <h2>
+    <a href="/hotels/{{ hotel.id }}/">
+      {{ hotel.name }}
+    </a>
+  </h2>
+
+  <p>{{ hotel.address }}</p>
+  <p>{{ hotel.description }}</p>
+
+{% empty %}
+  <p>ホテルが登録されていません。</p>
+{% endfor %}
